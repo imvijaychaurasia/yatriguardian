@@ -1,2 +1,2 @@
 # yatriguardian
-yatriguardian.in app website
+yatriguardian.in web app
