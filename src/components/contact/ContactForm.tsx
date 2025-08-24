@@ -144,6 +144,7 @@ Message: ${formData.message}`;
                     <option key={index} value={option}>
                       {option}
                     </option>
+                  ))}
                 </select>
               </div>
             )}
