@@ -70,8 +70,8 @@ const Testimonials: React.FC = () => {
     <section className="section bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="section-title">What Our Clients Say</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
             Read testimonials from our satisfied clients who successfully obtained their visas and traveled seamlessly.
           </p>
         </div>
@@ -122,22 +122,22 @@ const Testimonials: React.FC = () => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-lg shadow-md p-8 h-full">
+                <div className="bg-white rounded-lg shadow-md p-4 md:p-6 lg:p-8 h-full">
                   <div className="flex items-center mb-6">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover mr-4" 
+                      className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover mr-4" 
                     />
                     <div>
-                      <h4 className="font-semibold text-lg">{testimonial.name}</h4>
-                      <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                      <h4 className="font-semibold text-base md:text-lg">{testimonial.name}</h4>
+                      <p className="text-gray-500 text-xs md:text-sm">{testimonial.role}</p>
                       <div className="flex mt-1">
                         {renderStars(testimonial.rating)}
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-4">{testimonial.text}</p>
+                  <p className="text-sm md:text-base text-gray-600 mb-4">{testimonial.text}</p>
                   <div className="mt-4 flex justify-between items-center">
                     <span className="text-sm font-medium text-primary-600">
                       Destination: {testimonial.destination}

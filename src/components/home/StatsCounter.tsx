@@ -60,11 +60,11 @@ const StatsCounter: React.FC = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center p-6 rounded-lg bg-primary-700 bg-opacity-50">
+            <div key={index} className="text-center p-4 md:p-6 rounded-lg bg-primary-700 bg-opacity-50">
               <div className="flex justify-center mb-4">
                 {stat.icon}
               </div>
-              <div className="text-4xl font-bold mb-2">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
                 {isVisible ? (
                   <CountUp 
                     end={stat.value} 
@@ -75,7 +75,7 @@ const StatsCounter: React.FC = () => {
                   <span>0{stat.suffix}</span>
                 )}
               </div>
-              <p className="text-lg text-gray-200">{stat.label}</p>
+              <p className="text-sm md:text-base lg:text-lg text-gray-200">{stat.label}</p>
             </div>
           ))}
         </div>

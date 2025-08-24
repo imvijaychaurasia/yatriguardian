@@ -68,11 +68,11 @@ const Header: React.FC = () => {
             <img 
               src="/yatrivisaconsultant-logo.png" 
               alt="Yatri Visa Consultant Logo" 
-              className="h-10 w-auto"
+              className="h-8 sm:h-10 w-auto"
             />
             <div>
-              <div className="text-xl font-bold text-primary-800">Yatri Visa</div>
-              <div className="text-sm text-accent-600 -mt-1">Consultant</div>
+              <div className="text-lg sm:text-xl font-bold text-primary-800">Yatri Visa</div>
+              <div className="text-xs sm:text-sm text-accent-600 -mt-1">Consultant</div>
             </div>
           </Link>
           
@@ -82,7 +82,7 @@ const Header: React.FC = () => {
               <Link 
                 key={link.path} 
                 to={link.path} 
-                className={`font-medium hover:text-primary-600 transition-colors ${location.pathname === link.path ? 'text-primary-600' : 'text-gray-700'}`}
+                className={`font-medium hover:text-primary-600 transition-colors text-sm xl:text-base ${location.pathname === link.path ? 'text-primary-600' : 'text-gray-700'}`}
               >
                 {link.name}
               </Link>

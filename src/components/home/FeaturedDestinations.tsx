@@ -58,8 +58,8 @@ const FeaturedDestinations: React.FC = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Destinations</h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Featured Destinations</h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl">
               Explore popular destinations where we offer specialized visa services with high approval rates.
             </p>
           </div>
@@ -111,19 +111,19 @@ const FeaturedDestinations: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent"></div>
-                  <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white">
+                  <h3 className="absolute bottom-4 left-4 text-xl md:text-2xl font-bold text-white">
                     {destination.country}
                   </h3>
                 </div>
                 <div className="p-6">
-                  <p className="text-gray-600 mb-4">{destination.description}</p>
+                  <p className="text-sm md:text-base text-gray-600 mb-4">{destination.description}</p>
                   <div>
-                    <p className="font-medium mb-2">Visa Types:</p>
+                    <p className="text-sm md:text-base font-medium mb-2">Visa Types:</p>
                     <div className="flex flex-wrap gap-2">
                       {destination.visaTypes.map((type, idx) => (
                         <span 
                           key={idx} 
-                          className="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full"
+                          className="px-2 py-1 md:px-3 bg-primary-50 text-primary-700 text-xs md:text-sm rounded-full"
                         >
                           {type}
                         </span>
