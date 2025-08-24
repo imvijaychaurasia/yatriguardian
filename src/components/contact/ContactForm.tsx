@@ -38,7 +38,6 @@ const ContactForm: React.FC = () => {
 Email: ${formData.email}
 Phone: ${formData.phone}
 Service: ${formData.serviceType} - ${formData.subService}
-Urgency: ${formData.urgency}
 Message: ${formData.message}`;
     
     // Open WhatsApp
@@ -167,24 +166,6 @@ Message: ${formData.message}`;
               </select>
             </div>
             
-            <div>
-              <label htmlFor="urgency" className="block text-sm font-medium text-gray-700 mb-1">
-                Urgency Level
-              </label>
-              <select
-                id="urgency"
-                name="urgency"
-                value={formData.urgency}
-                onChange={handleChange}
-                className="select"
-              >
-                <option value="" disabled>Select urgency</option>
-                <option value="low">Low - Within 30 days</option>
-                <option value="medium">Medium - Within 14 days</option>
-                <option value="high">High - Within 7 days</option>
-                <option value="urgent">Urgent - Within 48 hours</option>
-              </select>
-            </div>
           </div>
           
           <div>
