@@ -71,8 +71,8 @@ const Header: React.FC = () => {
               className="h-8 sm:h-10 w-auto"
             />
             <div>
-              <div className="text-lg sm:text-xl font-bold text-primary-800">Yatri Visa</div>
-              <div className="text-xs sm:text-sm text-accent-600 -mt-1">Consultant</div>
+              <div className="text-lg sm:text-xl font-bold text-primary-800">Yatri</div>
+              <div className="text-xs sm:text-sm text-accent-600 -mt-1">Visa Consultant</div>
             </div>
           </Link>
           

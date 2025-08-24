@@ -15,8 +15,8 @@ const Footer: React.FC = () => {
                 className="h-6 md:h-8 w-auto"
               />
               <div>
-                <div className="text-lg md:text-xl font-bold text-white">Yatri Visa</div>
-                <div className="text-xs md:text-sm text-accent-400 -mt-1">Consultant</div>
+                <div className="text-lg md:text-xl font-bold text-white">Yatri</div>
+                <div className="text-xs md:text-sm text-accent-400 -mt-1">Visa Consultant</div>
               </div>
             </Link>
             <p className="text-sm md:text-base text-gray-300 mb-6">
