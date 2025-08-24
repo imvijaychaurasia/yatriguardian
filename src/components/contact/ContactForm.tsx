@@ -9,6 +9,7 @@ const ContactForm: React.FC = () => {
     serviceType: '',
     subService: '',
     contactMethod: '',
+    urgency: '',
     message: '',
     acceptPolicy: false
   });
@@ -37,6 +38,7 @@ const ContactForm: React.FC = () => {
 Email: ${formData.email}
 Phone: ${formData.phone}
 Service: ${formData.serviceType} - ${formData.subService}
+Urgency: ${formData.urgency}
 Message: ${formData.message}`;
     
     // Open WhatsApp
