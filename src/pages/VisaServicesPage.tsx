@@ -17,10 +17,6 @@ const VisaServicesPage: React.FC = () => {
       <VisaCategories />
       <ProcessTimeline />
       <DocumentChecklists />
-      <FAQ 
-        category="visa" 
-        title="Frequently Asked Questions About Visa Services"
-      />
       <CTASection />
     </>
   );

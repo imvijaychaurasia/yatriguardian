@@ -26,18 +26,6 @@ const categories = [
     description: 'For international education pursuits',
     features: ['Study permit assistance', 'Institution support', 'Extended validity']
   },
-  {
-    icon: Briefcase,
-    title: 'Immigration',
-    description: 'For permanent residency applications',
-    features: ['Complete documentation', 'Legal assistance', 'Status tracking']
-  },
-  {
-    icon: Heart,
-    title: 'Family Visa',
-    description: 'For family reunification purposes',
-    features: ['Family sponsorship', 'Multiple applicants', 'Relationship verification']
-  }
 ];
 
 const VisaCategories: React.FC = () => {

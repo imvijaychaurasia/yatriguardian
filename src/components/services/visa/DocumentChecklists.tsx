@@ -16,23 +16,11 @@ const documents = {
     { icon: FileSpreadsheet, name: 'Bank Statements', description: 'Last 3 months statements' },
     { icon: FileCheck, name: 'Travel Itinerary', description: 'Confirmed flight bookings' }
   ],
-  'Business Visa': [
-    { icon: FileText, name: 'Business Letter', description: 'Invitation from host company' },
-    { icon: FileCheck, name: 'Company Registration', description: 'Proof of business registration' },
-    { icon: FileSpreadsheet, name: 'Financial Documents', description: 'Company bank statements' },
-    { icon: FileImage, name: 'Professional Profile', description: 'Resume and credentials' }
-  ],
   'Student Visa': [
     { icon: FileCheck, name: 'Acceptance Letter', description: 'From educational institution' },
     { icon: FileSpreadsheet, name: 'Financial Proof', description: 'Proof of funds for study period' },
     { icon: FileText, name: 'Academic Records', description: 'Previous education certificates' },
     { icon: FileImage, name: 'Language Proficiency', description: 'IELTS/TOEFL scores' }
-  ],
-  'Work Visa': [
-    { icon: FileText, name: 'Employment Contract', description: 'Signed job offer letter' },
-    { icon: FileCheck, name: 'Work Permit', description: 'Approved work authorization' },
-    { icon: FileSpreadsheet, name: 'Qualification Documents', description: 'Degrees and certificates' },
-    { icon: FileImage, name: 'Professional References', description: 'Letters from previous employers' }
   ],
   'Family Visa': [
     { icon: FileText, name: 'Relationship Proof', description: 'Marriage/Birth certificates' },
@@ -69,6 +57,7 @@ const DocumentChecklists: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {documents[selectedType].map((doc, index) => {
             const IconComponent = doc.icon;
             return (

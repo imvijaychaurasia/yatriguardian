@@ -18,13 +18,6 @@ const services = [
     link: '/passport-services',
     items: ['New Applications', 'Renewals', 'Emergency Services', 'Lost Passport Assistance', 'Document Authentication']
   },
-  {
-    icon: <Plane size={48} className="text-primary-600" />,
-    title: 'Travel Services',
-    description: 'Comprehensive travel solutions including flights, accommodation, and packages.',
-    link: '/travel-services',
-    items: ['Flight Bookings', 'Hotel Reservations', 'Travel Insurance', 'Package Tours', 'Airport Transfers']
-  }
 ];
 
 const ServicesOverview: React.FC = () => {
@@ -60,6 +53,7 @@ const ServicesOverview: React.FC = () => {
         
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
