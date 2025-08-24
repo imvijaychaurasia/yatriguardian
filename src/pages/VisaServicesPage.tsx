@@ -3,7 +3,6 @@ import PageBanner from '../components/common/PageBanner';
 import VisaCategories from '../components/services/visa/VisaCategories';
 import ProcessTimeline from '../components/services/visa/ProcessTimeline';
 import DocumentChecklists from '../components/services/visa/DocumentChecklists';
-import FeeStructure from '../components/services/visa/FeeStructure';
 import FAQ from '../components/common/FAQ';
 import CTASection from '../components/home/CTASection';
 
@@ -18,7 +17,6 @@ const VisaServicesPage: React.FC = () => {
       <VisaCategories />
       <ProcessTimeline />
       <DocumentChecklists />
-      <FeeStructure />
       <FAQ 
         category="visa" 
         title="Frequently Asked Questions About Visa Services"

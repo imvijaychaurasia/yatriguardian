@@ -32,8 +32,6 @@ const Header: React.FC = () => {
     { name: 'Home', path: '/' },
     { name: 'Visa Services', path: '/visa-services' },
     { name: 'Passport Services', path: '/passport-services' },
-    { name: 'Travel Services', path: '/travel-services' },
-    { name: 'Requirement Checker', path: '/requirement-checker' },
     { name: 'Contact', path: '/contact' },
   ];
   

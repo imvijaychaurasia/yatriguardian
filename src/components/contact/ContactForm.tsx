@@ -170,8 +170,6 @@ const ContactForm: React.FC = () => {
                 className="select"
               >
                 <option value="" disabled>Select contact method</option>
-                <option value="email">Email</option>
-                <option value="phone">Phone</option>
                 <option value="whatsapp">WhatsApp</option>
               </select>
             </div>

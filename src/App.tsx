@@ -11,9 +11,7 @@ import LoadingSpinner from './components/common/LoadingSpinner';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const VisaServicesPage = lazy(() => import('./pages/VisaServicesPage'));
 const PassportServicesPage = lazy(() => import('./pages/PassportServicesPage'));
-const TravelServicesPage = lazy(() => import('./pages/TravelServicesPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
-const RequirementCheckerPage = lazy(() => import('./pages/RequirementCheckerPage'));
 
 function App() {
   return (
@@ -28,9 +26,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/visa-services" element={<VisaServicesPage />} />
               <Route path="/passport-services" element={<PassportServicesPage />} />
-              <Route path="/travel-services" element={<TravelServicesPage />} />
               <Route path="/contact" element={<ContactPage />} />
-              <Route path="/requirement-checker" element={<RequirementCheckerPage />} />
             </Routes>
           </Suspense>
         </main>

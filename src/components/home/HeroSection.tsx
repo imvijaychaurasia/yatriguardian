@@ -28,10 +28,6 @@ const HeroSection: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
-              <Link to="/requirement-checker" className="btn bg-accent-500 hover:bg-accent-600 text-white">
-                Check Visa Requirements
-                <ArrowRight size={18} className="ml-2" />
-              </Link>
               <Link to="/contact" className="btn bg-transparent border border-white text-white hover:bg-white hover:text-primary-800">
                 Contact an Expert
               </Link>

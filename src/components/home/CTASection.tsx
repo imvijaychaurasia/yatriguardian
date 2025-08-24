@@ -28,12 +28,6 @@ const CTASection: React.FC = () => {
               Contact an Expert
               <ArrowRight size={18} className="ml-2" />
             </Link>
-            <Link 
-              to="/requirement-checker" 
-              className="btn bg-transparent border border-white text-white hover:bg-white hover:text-primary-800"
-            >
-              Check Visa Requirements
-            </Link>
           </div>
         </div>
       </div>
