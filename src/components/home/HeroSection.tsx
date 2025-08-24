@@ -94,7 +94,6 @@ const HeroSection: React.FC = () => {
                   <select name="service" className="select bg-gray-50 text-gray-800" required>
                     <option value="" disabled selected>Select service</option>
                     <option value="Tourist Visa">Tourist Visa</option>
-                    <option value="Business Visa">Business Visa</option>
                     <option value="Student Visa">Student Visa</option>
                     <option value="Immigration Visa">Immigration Visa</option>
                     <option value="Passport Services">Passport Services</option>

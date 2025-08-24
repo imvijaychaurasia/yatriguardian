@@ -9,7 +9,6 @@ const ContactForm: React.FC = () => {
     serviceType: '',
     subService: '',
     contactMethod: '',
-    urgency: '',
     message: '',
     acceptPolicy: false
   });
@@ -17,9 +16,8 @@ const ContactForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   
   const serviceOptions = {
-    'visa': ['Tourist Visa', 'Business Visa', 'Student Visa', 'Work Visa', 'Immigration Visa'],
+    'visa': ['Tourist Visa', 'Student Visa', 'Immigration Visa'],
     'passport': ['New Application', 'Renewal', 'Emergency Service', 'Lost Passport', 'Document Authentication'],
-    'travel': ['Flight Booking', 'Hotel Reservation', 'Travel Insurance', 'Package Tour', 'Other Services']
   };
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -39,7 +37,6 @@ const ContactForm: React.FC = () => {
 Email: ${formData.email}
 Phone: ${formData.phone}
 Service: ${formData.serviceType} - ${formData.subService}
-Urgency: ${formData.urgency}
 Message: ${formData.message}`;
     
     // Open WhatsApp
@@ -147,7 +144,6 @@ Message: ${formData.message}`;
                     <option key={index} value={option}>
                       {option}
                     </option>
-                  ))}
                 </select>
               </div>
             )}
@@ -168,24 +164,6 @@ Message: ${formData.message}`;
               </select>
             </div>
             
-            <div>
-              <label htmlFor="urgency" className="block text-sm font-medium text-gray-700 mb-1">
-                Urgency Level
-              </label>
-              <select
-                id="urgency"
-                name="urgency"
-                value={formData.urgency}
-                onChange={handleChange}
-                className="select"
-              >
-                <option value="" disabled>Select urgency</option>
-                <option value="low">Low - Within 30 days</option>
-                <option value="medium">Medium - Within 14 days</option>
-                <option value="high">High - Within 7 days</option>
-                <option value="urgent">Urgent - Within 48 hours</option>
-              </select>
-            </div>
           </div>
           
           <div>
