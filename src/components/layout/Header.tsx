@@ -58,7 +58,7 @@ const Header: React.FC = () => {
               <span>Call us: <a href="tel:+919920928938" className="font-medium hover:text-primary-600">+91 9920-928-938</a></span>
             </div>
             <div>
-              <a href="mailto:connect@yatriguardian.in" className="hover:text-primary-600">connect@yatriguardian.in</a>
+              <a href="mailto:yatrivisaconsultant@gmail.com" className="hover:text-primary-600">yatrivisaconsultant@gmail.com</a>
             </div>
           </div>
         </div>
@@ -68,13 +68,13 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/yatriguardian.in.png" 
-              alt="Yatri Guardian Logo" 
+              src="/yatrivisaconsultant-logo.png" 
+              alt="Yatri Visa Consultant Logo" 
               className="h-10 w-auto"
             />
             <div>
-              <div className="text-xl font-bold text-primary-800">Yatri</div>
-              <div className="text-sm text-accent-600 -mt-1">Guardian</div>
+              <div className="text-xl font-bold text-primary-800">Yatri Visa</div>
+              <div className="text-sm text-accent-600 -mt-1">Consultant</div>
             </div>
           </Link>
           

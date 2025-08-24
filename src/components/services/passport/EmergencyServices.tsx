@@ -83,8 +83,8 @@ const EmergencyServices: React.FC = () => {
                 
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 text-green-500 mr-2" />
-                  <a href="mailto:connect@yatriguardian.in" className="text-gray-700 hover:text-green-600">
-                    connect@yatriguardian.in
+                  <a href="mailto:yatrivisaconsultant@gmail.com" className="text-gray-700 hover:text-green-600">
+                    yatrivisaconsultant@gmail.com
                   </a>
                 </div>
               </div>

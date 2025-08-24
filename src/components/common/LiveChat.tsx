@@ -40,7 +40,7 @@ const LiveChat: React.FC = () => {
             <div className="flex flex-col space-y-3">
               <div className="flex items-start">
                 <div className="bg-primary-100 text-primary-800 p-3 rounded-lg rounded-tl-none max-w-[80%]">
-                  <p>👋 Hello! Welcome to Yatri Guardian. How can we help you today?</p>
+                  <p>👋 Hello! Welcome to Yatri Visa Consultant. How can we help you today?</p>
                 </div>
               </div>
               

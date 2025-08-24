@@ -36,7 +36,7 @@ const OfficeLocation: React.FC = () => {
             <div>
               <h4 className="font-medium mb-1">Email</h4>
               <p className="text-gray-600">
-                <a href="mailto:connect@yatriguardian.in" className="hover:text-primary-600">connect@yatriguardian.in</a>
+                <a href="mailto:yatrivisaconsultant@gmail.com" className="hover:text-primary-600">yatrivisaconsultant@gmail.com</a>
               </p>
             </div>
           </div>

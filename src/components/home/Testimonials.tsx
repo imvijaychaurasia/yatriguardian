@@ -22,7 +22,7 @@ const testimonials = [
     role: 'Business Professional',
     image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600',
     rating: 5,
-    text: 'Yatri Guardian helped me secure a business visa to the USA when I had previously been rejected twice. Their expertise made all the difference. The team knows exactly what immigration officers are looking for.',
+    text: 'Yatri Visa Consultant helped me secure a business visa to the USA when I had previously been rejected twice. Their expertise made all the difference. The team knows exactly what immigration officers are looking for.',
     destination: 'USA'
   },
   {
@@ -47,6 +47,7 @@ const testimonials = [
     image: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600',
     rating: 5,
     text: 'As a doctor relocating to the UK, my visa process was complex. Yatri Guardian provided expert assistance that made my transition smooth. Their knowledge of medical registration requirements was impressive.',
+    text: 'As a doctor relocating to the UK, my visa process was complex. Yatri Visa Consultant provided expert assistance that made my transition smooth. Their knowledge of medical registration requirements was impressive.',
     destination: 'UK'
   }
 ];

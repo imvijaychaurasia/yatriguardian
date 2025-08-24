@@ -10,17 +10,17 @@ const Footer: React.FC = () => {
           <div>
             <Link to="/" className="flex items-center space-x-3 mb-6">
               <img 
-                src="/yatriguardian.in.png" 
-                alt="Yatri Guardian Logo" 
+                src="/yatrivisaconsultant-logo.png" 
+                alt="Yatri Visa Consultant Logo" 
                 className="h-8 w-auto"
               />
               <div>
-                <div className="text-xl font-bold text-white">Yatri</div>
-                <div className="text-sm text-accent-400 -mt-1">Guardian</div>
+                <div className="text-xl font-bold text-white">Yatri Visa</div>
+                <div className="text-sm text-accent-400 -mt-1">Consultant</div>
               </div>
             </Link>
             <p className="text-gray-300 mb-6">
-              Yatri Guardian offers comprehensive visa and travel consultancy services to make your international journey smooth and hassle-free.
+              Yatri Visa Consultant offers comprehensive visa and travel consultancy services to make your international journey smooth and hassle-free.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-accent-400 transition-colors" aria-label="Facebook">
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex">
                 <Mail size={20} className="mr-3 text-accent-400 flex-shrink-0" />
-                <a href="mailto:connect@yatriguardian.in" className="text-gray-300 hover:text-white transition-colors">connect@yatriguardian.in</a>
+                <a href="mailto:yatrivisaconsultant@gmail.com" className="text-gray-300 hover:text-white transition-colors">yatrivisaconsultant@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
       <div className="border-t border-primary-700">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Yatri Guardian. All rights reserved.
+            &copy; {new Date().getFullYear()} Yatri Visa Consultant. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0 text-sm">
             <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
