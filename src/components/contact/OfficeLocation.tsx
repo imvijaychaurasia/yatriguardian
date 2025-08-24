@@ -46,7 +46,7 @@ const OfficeLocation: React.FC = () => {
             <div>
               <h4 className="font-medium mb-1">Business Hours</h4>
               <p className="text-gray-600">
-                Monday - Saturday: 9:00 AM - 6:00 PM<br />
+                Monday - Saturday: 9:00 AM - 10:00 PM<br />
                 Sunday: Closed
               </p>
             </div>
