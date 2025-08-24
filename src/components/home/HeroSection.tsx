@@ -1,9 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const HeroSection: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    serviceType: '',
+    subService: '',
+    message: ''
+  });
+
+  const serviceOptions = {
+    'visa': ['Tourist Visa', 'Student Visa', 'Immigration Visa'],
+    'passport': ['New Application', 'Renewal', 'Emergency Service', 'Lost Passport', 'Document Authentication'],
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+      // Reset subService when serviceType changes
+      ...(name === 'serviceType' ? { subService: '' } : {})
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const whatsappMessage = `Hello, I'm ${formData.name}.
+Email: ${formData.email}
+Phone: ${formData.phone}
+Service: ${formData.serviceType} - ${formData.subService}
+Message: ${formData.message}`;
+    
+    const whatsappUrl = `https://wa.me/919920928938?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section className="relative bg-primary-800 text-white overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -57,30 +95,15 @@ const HeroSection: React.FC = () => {
           >
             <div className="bg-white rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold text-primary-800 mb-4">Get in Touch</h3>
-              <form className="space-y-6" onSubmit={(e) => {
-                e.preventDefault();
-                const formData = new FormData(e.target as HTMLFormElement);
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const phone = formData.get('phone');
-                const serviceType = formData.get('serviceType');
-                const subService = formData.get('subService');
-                const message = formData.get('message');
-                
-                const whatsappMessage = `Hello, I'm ${name}.
-Email: ${email}
-Phone: ${phone}
-Service: ${serviceType} - ${subService}
-Message: ${message}`;
-                const whatsappUrl = `https://wa.me/919920928938?text=${encodeURIComponent(whatsappMessage)}`;
-                window.open(whatsappUrl, '_blank');
-              }}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 gap-4">
                   <div>
                     <label className="block text-gray-600 mb-1 text-sm font-medium">Full Name *</label>
                     <input 
                       type="text" 
                       name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       className="input bg-gray-50 text-gray-800" 
                       placeholder="Enter your name"
                       required
@@ -92,6 +115,8 @@ Message: ${message}`;
                     <input 
                       type="email" 
                       name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="input bg-gray-50 text-gray-800" 
                       placeholder="Enter your email"
                       required
@@ -103,6 +128,8 @@ Message: ${message}`;
                     <input 
                       type="tel" 
                       name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       className="input bg-gray-50 text-gray-800" 
                       placeholder="Enter your phone number"
                       required
@@ -113,33 +140,44 @@ Message: ${message}`;
                     <label className="block text-gray-600 mb-1 text-sm font-medium">Service Type *</label>
                     <select 
                       name="serviceType" 
+                      value={formData.serviceType}
+                      onChange={handleChange}
                       className="select bg-gray-50 text-gray-800" 
                       required
-                      id="serviceTypeSelect"
                     >
-                      <option value="" disabled selected>Select a service</option>
+                      <option value="" disabled>Select a service</option>
                       <option value="visa">Visa Services</option>
                       <option value="passport">Passport Services</option>
                     </select>
                   </div>
                   
-                  <div>
-                    <label className="block text-gray-600 mb-1 text-sm font-medium">Specific Service *</label>
-                    <select 
-                      name="subService" 
-                      className="select bg-gray-50 text-gray-800" 
-                      required
-                      id="subServiceSelect"
-                    >
-                      <option value="" disabled selected>Select specific service</option>
-                    </select>
-                  </div>
+                  {formData.serviceType && (
+                    <div>
+                      <label className="block text-gray-600 mb-1 text-sm font-medium">Specific Service *</label>
+                      <select 
+                        name="subService" 
+                        value={formData.subService}
+                        onChange={handleChange}
+                        className="select bg-gray-50 text-gray-800" 
+                        required
+                      >
+                        <option value="" disabled>Select specific service</option>
+                        {serviceOptions[formData.serviceType as keyof typeof serviceOptions]?.map((option, index) => (
+                          <option key={index} value={option}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
                 </div>
                 
                 <div>
                   <label className="block text-gray-600 mb-1 text-sm font-medium">Your Message *</label>
                   <textarea 
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="input bg-gray-50 text-gray-800 resize-none" 
                     rows={3}
                     placeholder="Tell us about your requirements"
@@ -165,40 +203,6 @@ Message: ${message}`;
           </motion.div>
         </div>
       </div>
-      
-      <script dangerouslySetInnerHTML={{
-        __html: `
-          document.addEventListener('DOMContentLoaded', function() {
-            const serviceTypeSelect = document.getElementById('serviceTypeSelect');
-            const subServiceSelect = document.getElementById('subServiceSelect');
-            
-            if (serviceTypeSelect && subServiceSelect) {
-              const serviceOptions = {
-                'visa': ['Tourist Visa', 'Student Visa', 'Immigration Visa'],
-                'passport': ['New Application', 'Renewal', 'Emergency Service', 'Lost Passport', 'Document Authentication']
-              };
-              
-              function updateSubServices() {
-                const selectedService = serviceTypeSelect.value;
-                
-                // Clear existing options except the first one
-                subServiceSelect.innerHTML = '<option value="" disabled selected>Select specific service</option>';
-                
-                if (selectedService && serviceOptions[selectedService]) {
-                  serviceOptions[selectedService].forEach(function(option) {
-                    const optionElement = document.createElement('option');
-                    optionElement.value = option;
-                    optionElement.textContent = option;
-                    subServiceSelect.appendChild(optionElement);
-                  });
-                }
-              }
-              
-              serviceTypeSelect.addEventListener('change', updateSubServices);
-            }
-          });
-        `
-      }} />
     </section>
   );
 };
