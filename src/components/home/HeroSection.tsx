@@ -56,47 +56,65 @@ const HeroSection: React.FC = () => {
             className="relative hidden lg:block"
           >
             <div className="bg-white rounded-lg shadow-xl p-6">
-              <h3 className="text-xl font-semibold text-primary-800 mb-4">Find Visa Requirements</h3>
-              <form className="space-y-4">
+              <h3 className="text-xl font-semibold text-primary-800 mb-4">Contact Us</h3>
+              <form className="space-y-4" onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target as HTMLFormElement);
+                const name = formData.get('name');
+                const phone = formData.get('phone');
+                const service = formData.get('service');
+                const message = formData.get('message');
+                
+                const whatsappMessage = `Hello, I'm ${name}. Phone: ${phone}. Service needed: ${service}. Message: ${message}`;
+                const whatsappUrl = `https://wa.me/919920928938?text=${encodeURIComponent(whatsappMessage)}`;
+                window.open(whatsappUrl, '_blank');
+              }}>
                 <div>
-                  <label className="block text-gray-600 mb-2 text-sm">Your Nationality</label>
-                  <select className="select bg-gray-50 text-gray-800">
-                    <option value="" disabled selected>Select your country</option>
-                    <option value="in">India</option>
-                    <option value="us">United States</option>
-                    <option value="uk">United Kingdom</option>
-                    <option value="ca">Canada</option>
-                    <option value="au">Australia</option>
+                  <label className="block text-gray-600 mb-2 text-sm">Your Name</label>
+                  <input 
+                    type="text" 
+                    name="name"
+                    className="input bg-gray-50 text-gray-800" 
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-600 mb-2 text-sm">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    name="phone"
+                    className="input bg-gray-50 text-gray-800" 
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-600 mb-2 text-sm">Service Needed</label>
+                  <select name="service" className="select bg-gray-50 text-gray-800" required>
+                    <option value="" disabled selected>Select service</option>
+                    <option value="Tourist Visa">Tourist Visa</option>
+                    <option value="Business Visa">Business Visa</option>
+                    <option value="Student Visa">Student Visa</option>
+                    <option value="Immigration Visa">Immigration Visa</option>
+                    <option value="Passport Services">Passport Services</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-gray-600 mb-2 text-sm">Destination Country</label>
-                  <select className="select bg-gray-50 text-gray-800">
-                    <option value="" disabled selected>Select destination</option>
-                    <option value="us">United States</option>
-                    <option value="ca">Canada</option>
-                    <option value="uk">United Kingdom</option>
-                    <option value="au">Australia</option>
-                    <option value="de">Germany</option>
-                    <option value="fr">France</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-gray-600 mb-2 text-sm">Purpose of Visit</label>
-                  <select className="select bg-gray-50 text-gray-800">
-                    <option value="" disabled selected>Select purpose</option>
-                    <option value="tourism">Tourism</option>
-                    <option value="business">Business</option>
-                    <option value="study">Study</option>
-                    <option value="work">Work</option>
-                    <option value="immigration">Immigration</option>
-                  </select>
+                  <label className="block text-gray-600 mb-2 text-sm">Message</label>
+                  <textarea 
+                    name="message"
+                    className="input bg-gray-50 text-gray-800 resize-none" 
+                    rows={3}
+                    placeholder="Tell us about your requirements"
+                    required
+                  ></textarea>
                 </div>
                 <button 
-                  type="button" 
+                  type="submit" 
                   className="btn bg-primary-600 hover:bg-primary-700 text-white w-full"
                 >
-                  Check Requirements
+                  Contact via WhatsApp
                 </button>
               </form>
             </div>

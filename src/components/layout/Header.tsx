@@ -89,12 +89,6 @@ const Header: React.FC = () => {
             ))}
           </div>
           
-          <div className="hidden lg:block">
-            <Link to="/contact" className="btn btn-primary">
-              Get Started
-            </Link>
-          </div>
-          
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button 
@@ -128,11 +122,6 @@ const Header: React.FC = () => {
                   {link.name}
                 </Link>
               ))}
-              <div className="pt-4">
-                <Link to="/contact" className="btn btn-primary w-full justify-center">
-                  Get Started
-                </Link>
-              </div>
               <div className="pt-6 flex flex-col space-y-3 text-sm">
                 <div className="flex items-center space-x-2">
                   <Phone size={16} className="text-primary-700" />

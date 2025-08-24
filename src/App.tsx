@@ -4,7 +4,6 @@ import ScrollToTop from './components/common/ScrollToTop';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import NewsTickerBar from './components/layout/NewsTickerBar';
-import LiveChat from './components/common/LiveChat';
 import LoadingSpinner from './components/common/LoadingSpinner';
 
 // Lazy-loaded pages
@@ -30,7 +29,6 @@ function App() {
             </Routes>
           </Suspense>
         </main>
-        <LiveChat />
         <Footer />
       </div>
     </Router>
