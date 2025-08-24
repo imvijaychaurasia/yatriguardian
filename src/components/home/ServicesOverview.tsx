@@ -47,7 +47,7 @@ const ServicesOverview: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="section-title">Our Comprehensive Services</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We offer expert visa, passport, and travel services to make your international journey seamless and stress-free.
+            We offer expert visa and passport services to make your international journey seamless and stress-free.
           </p>
         </div>
         

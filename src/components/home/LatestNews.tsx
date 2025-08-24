@@ -35,9 +35,9 @@ const LatestNews: React.FC = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Latest Travel News</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Latest Visa News</h2>
             <p className="text-lg text-gray-600 max-w-2xl">
-              Stay updated with the latest visa regulations, travel advisories, and immigration news.
+              Stay updated with the latest visa regulations, immigration updates, and policy changes.
             </p>
           </div>
           <Link to="#" className="mt-4 md:mt-0 flex items-center font-medium text-primary-600 hover:text-primary-800 transition-colors">

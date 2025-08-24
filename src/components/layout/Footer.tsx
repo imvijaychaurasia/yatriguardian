@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
               </div>
             </Link>
             <p className="text-gray-300 mb-6">
-              Yatri Visa Consultant offers comprehensive visa and travel consultancy services to make your international journey smooth and hassle-free.
+              Yatri Visa Consultant offers comprehensive visa and passport consultancy services to make your international journey smooth and hassle-free.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-accent-400 transition-colors" aria-label="Facebook">

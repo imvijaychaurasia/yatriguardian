@@ -123,7 +123,6 @@ Message: ${formData.message}`;
                 <option value="" disabled>Select a service</option>
                 <option value="visa">Visa Services</option>
                 <option value="passport">Passport Services</option>
-                <option value="travel">Travel Services</option>
               </select>
             </div>
             
