@@ -115,12 +115,7 @@ Message: ${message}`;
                       name="serviceType" 
                       className="select bg-gray-50 text-gray-800" 
                       required
-                      onChange={(e) => {
-                        const subServiceSelect = document.querySelector('select[name="subService"]') as HTMLSelectElement;
-                        if (subServiceSelect) {
-                          subServiceSelect.value = '';
-                        }
-                      }}
+                      id="serviceTypeSelect"
                     >
                       <option value="" disabled selected>Select a service</option>
                       <option value="visa">Visa Services</option>
@@ -134,16 +129,9 @@ Message: ${message}`;
                       name="subService" 
                       className="select bg-gray-50 text-gray-800" 
                       required
+                      id="subServiceSelect"
                     >
                       <option value="" disabled selected>Select specific service</option>
-                      <option value="Tourist Visa">Tourist Visa</option>
-                      <option value="Student Visa">Student Visa</option>
-                      <option value="Immigration Visa">Immigration Visa</option>
-                      <option value="New Application">New Application</option>
-                      <option value="Renewal">Renewal</option>
-                      <option value="Emergency Service">Emergency Service</option>
-                      <option value="Lost Passport">Lost Passport</option>
-                      <option value="Document Authentication">Document Authentication</option>
                     </select>
                   </div>
                 </div>
@@ -171,6 +159,38 @@ Message: ${message}`;
                   </button>
                 </div>
               </form>
+              
+              <script dangerouslySetInnerHTML={{
+                __html: `
+                  document.addEventListener('DOMContentLoaded', function() {
+                    const serviceTypeSelect = document.getElementById('serviceTypeSelect');
+                    const subServiceSelect = document.getElementById('subServiceSelect');
+                    
+                    const serviceOptions = {
+                      'visa': ['Tourist Visa', 'Student Visa', 'Immigration Visa'],
+                      'passport': ['New Application', 'Renewal', 'Emergency Service', 'Lost Passport', 'Document Authentication']
+                    };
+                    
+                    function updateSubServices() {
+                      const selectedService = serviceTypeSelect.value;
+                      
+                      // Clear existing options except the first one
+                      subServiceSelect.innerHTML = '<option value="" disabled selected>Select specific service</option>';
+                      
+                      if (selectedService && serviceOptions[selectedService]) {
+                        serviceOptions[selectedService].forEach(function(option) {
+                          const optionElement = document.createElement('option');
+                          optionElement.value = option;
+                          optionElement.textContent = option;
+                          subServiceSelect.appendChild(optionElement);
+                        });
+                      }
+                    }
+                    
+                    serviceTypeSelect.addEventListener('change', updateSubServices);
+                  });
+                `
+              }} />
             </div>
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent-500 rounded-full z-[-1]"></div>
             <div className="absolute -top-6 -left-6 w-16 h-16 bg-secondary-500 rounded-full z-[-1]"></div>
